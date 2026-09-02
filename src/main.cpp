@@ -116,13 +116,13 @@ public:
             });
 
         if (it_juara != behavior_data.end()) {
-            // Berikan bonus loyalitas +60 detik langsung ke sumber data utama
+            
             it_juara->duration += 60;
             std::cout << "Top Winner Found: " << it_juara->name << " - " << it_juara->category
                 << " (Updated Total: " << it_juara->duration << " seconds)\n";
         }
 
-        // 2. Jika tetap ingin mencetak daftar terurut untuk ditampilkan ke banner:
+        
         std::vector<UserBehavior> high_interest_categories(behavior_data.begin(), behavior_data.end());
         std::sort(high_interest_categories.begin(), high_interest_categories.end(), [](const auto& a, const auto& b) {
             return a.duration > b.duration;
